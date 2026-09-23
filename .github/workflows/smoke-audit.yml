@@ -1,0 +1,14 @@
+name: Orbit v2.4 Smoke Audit
+
+on:
+  workflow_dispatch:
+
+jobs:
+  smoke-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Report smoke audit start
+        run: |
+          echo "Orbit v2.4 smoke audit workflow dispatched."
+          echo "Branch: ${{ github.ref_name }}"
+          date -u +"Started at: %Y-%m-%dT%H:%M:%SZ"
